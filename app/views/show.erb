@@ -1,0 +1,8 @@
+<div><%= @recipe.name %></div>
+<div><%= @recipe.ingredients %></div>
+<div><%= @recipe.cook_time %> minutes</div>
+
+<form method="post" action="/recipes/<%= @recipe.id %>/delete">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>
